@@ -15,7 +15,7 @@ resource "aws_docdb_cluster_instance" "cluster_instances" {
   count              = var.NODE_COUNT
   identifier         = "${var.COMPONENT}-${var.ENV}-${count.index}"
   cluster_identifier = aws_docdb_cluster.docdb.id
-  instance_class     = var.NODE_TYPE
+  instance_class     = var.INSTANCE_CLASS
 }
 
 data "aws_secretsmanager_secret" "roboshop" {
