@@ -1,10 +1,10 @@
 variable "COMPONENT" {}
 variable "ENV" {}
-variable "SKIP_FINAL_SNAPSHOT" {}
+variable "INSTANCE_CLASS" {}
 variable "ENGINE" {}
 variable "SUBNET_IDS" {}
 variable "FAMILY" {}
-variable "NODE_TYPE" {}
+variable "SKIP_FINAL_SNAPSHOT" {}
 variable "NODE_COUNT" {}
 variable "VPC_ID" {}
 variable "CIDR_BLOCK" {}
