@@ -1,0 +1,12 @@
+variable "COMPONENT" {}
+variable "ENV" {}
+variable "SKIP_FINAL_SNAPSHOT" {}
+variable "ENGINE" {}
+variable "SUBNET_IDS" {}
+variable "FAMILY" {}
+variable "NODE_TYPE" {}
+variable "NODE_COUNT" {}
+variable "VPC_ID" {}
+variable "CIDR_BLOCK" {}
+variable "AZ" {}
+variable "ENGINE_VERSION" {}
