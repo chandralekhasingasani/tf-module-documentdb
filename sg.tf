@@ -1,12 +1,12 @@
 resource "aws_security_group" "allow_tls" {
-  name        = "allow_mysql"
+  name        = "allow documentdb"
   description = "Allow mysql inbound traffic"
   vpc_id      = var.VPC_ID
 
   ingress {
     description      = "TLS from VPC"
-    from_port        = 3306
-    to_port          = 3306
+    from_port        = 27017
+    to_port          = 27017
     protocol         = "tcp"
     cidr_blocks      = [var.CIDR_BLOCK]
   }
