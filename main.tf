@@ -8,7 +8,7 @@ resource "aws_docdb_cluster" "docdb" {
   db_cluster_parameter_group_name = aws_docdb_cluster_parameter_group.example.name
   db_subnet_group_name = aws_docdb_subnet_group.default.name
   vpc_security_group_ids = [aws_security_group.allow_tls.id]
-  availability_zones = [var.AZ]
+  availability_zones = var.AZ
 }
 
 resource "aws_docdb_cluster_instance" "cluster_instances" {
