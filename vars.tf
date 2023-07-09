@@ -10,3 +10,5 @@ variable "VPC_ID" {}
 variable "CIDR_BLOCK" {}
 variable "AZ" {}
 variable "ENGINE_VERSION" {}
+variable "DB_NAME" {}
+variable "WORKSTATION_IP" {}

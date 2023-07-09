@@ -8,7 +8,7 @@ resource "aws_security_group" "allow_tls" {
     from_port        = 27017
     to_port          = 27017
     protocol         = "tcp"
-    cidr_blocks      = [var.CIDR_BLOCK]
+    cidr_blocks      = [var.CIDR_BLOCK,var.WORKSTATION_IP]
   }
 
   egress {
