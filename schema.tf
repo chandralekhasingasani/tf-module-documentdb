@@ -10,9 +10,7 @@ unzip mongodb.zip
 cd mongodb-main
 wget https://truststore.pki.rds.amazonaws.com/global/global-bundle.pem
 echo "downloaded"
-mongo --ssl --host ${aws_docdb_cluster.docdb.endpoint}:27017 --sslCAFile global-bundle.pem --username ${jsondecode(data.aws_secretsmanager_secret_version.roboshop.secret_string)["DOCUMENTDB_USERNAME"]} --password ${jsondecode(data.aws_secretsmanager_secret_version.roboshop.secret_string)["DOCUMENTDB_PASSWORD"]}
-mongo < ${var.DB_NAME}.js
-
+mongo --ssl --host ${aws_docdb_cluster.docdb.endpoint}:27017 --sslCAFile global-bundle.pem --username ${jsondecode(data.aws_secretsmanager_secret_version.roboshop.secret_string)["DOCUMENTDB_USERNAME"]} --password ${jsondecode(data.aws_secretsmanager_secret_version.roboshop.secret_string)["DOCUMENTDB_PASSWORD"]} < ${var.DB_NAME}.js
 EOF
   }
 }
