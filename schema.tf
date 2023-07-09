@@ -1,7 +1,7 @@
 resource "null_resource" "test" {
   provisioner "local-exec" {
     command = <<EOF
-curl -s -L -o /tmp/mongodb.zip "https://github.com/roboshop-devops-project/mongodb/archive/main.zip"
+curl -s -L  -o /tmp/mongodb.zip "https://github.com/roboshop-devops-project/mongodb/archive/main.zip"
 cd /tmp
 unzip mongodb.zip
 cd mongodb-main
